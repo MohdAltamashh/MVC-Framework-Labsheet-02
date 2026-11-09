@@ -1,0 +1,1 @@
+</main><footer class="footer">PHP MVC Framework Lab · Educational Project</footer></body></html>

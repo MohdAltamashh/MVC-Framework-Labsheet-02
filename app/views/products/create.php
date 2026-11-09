@@ -1,0 +1,6 @@
+<?php require __DIR__.'/../layouts/header.php'; ?><h1>Product Registration</h1><form class="panel" method="post" action="<?= BASE_URL ?>/?action=store" enctype="multipart/form-data">
+<label>Product Name</label><input name="name" value="<?= e($old['name']??'') ?>"><?php if(isset($errors['name'])):?><p class="error"><?= e($errors['name']) ?></p><?php endif;?>
+<label>Price</label><input type="number" step="0.01" name="price" value="<?= e($old['price']??'') ?>"><?php if(isset($errors['price'])):?><p class="error"><?= e($errors['price']) ?></p><?php endif;?>
+<label>Quantity</label><input type="number" name="quantity" value="<?= e($old['quantity']??'') ?>"><?php if(isset($errors['quantity'])):?><p class="error"><?= e($errors['quantity']) ?></p><?php endif;?>
+<label>Product Image (JPG/PNG/WEBP, max 2MB)</label><input type="file" name="image" accept="image/jpeg,image/png,image/webp"><?php if(isset($errors['image'])):?><p class="error"><?= e($errors['image']) ?></p><?php endif;?>
+<button>Save Product</button></form><?php require __DIR__.'/../layouts/footer.php'; ?>
